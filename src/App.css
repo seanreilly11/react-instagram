@@ -43,12 +43,26 @@ footer {
 }
 
 .post {
-    margin: 1rem 0;
     width: 100%;
+    margin: 0.5rem 0;
+}
+
+.post-header {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.post-header img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .post-user {
-    padding: 1rem;
+    padding-left: 0.5rem;
 }
 
 .post-image {
@@ -57,9 +71,52 @@ footer {
     align-items: center;
 }
 
-.post-likes {
+.post-icons {
+    display: flex;
     padding: 0.25rem 1rem;
-    font-size: 0.9rem;
+    font-size: 1.25rem;
+}
+
+.post-icon {
+    margin-right: 0.75rem;
+    cursor: pointer;
+}
+
+.post-icon-heart-solid,
+.post-icon-comment-solid,
+.post-icon-plane-solid {
+    display: none;
+    color: rgb(220, 0, 0);
+}
+
+.post-icon-heart-reg:hover,
+.post-icon-comment-reg:hover,
+.post-icon-plane-reg:hover {
+    display: none;
+}
+
+.post-icon-heart-reg:hover + .post-icon-heart-solid {
+    display: inline-block;
+}
+
+.post-icon-comment-reg:hover + .post-icon-comment-solid {
+    display: inline-block;
+}
+
+.post-icon-plane-reg:hover + .post-icon-plane-solid {
+    display: inline-block;
+}
+
+.show-icon {
+    display: inline-block;
+}
+
+.hide-icon {
+    display: none;
+}
+
+.post-likes {
+    padding: 0 1rem 0.25rem;
     font-weight: lighter;
 }
 
